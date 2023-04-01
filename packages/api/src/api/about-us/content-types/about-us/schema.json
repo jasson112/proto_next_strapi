@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About-us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner_title": {
+      "type": "string",
+      "required": true
+    },
+    "banner_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Card": {
+      "displayName": "Card",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us-item.card",
+      "required": true
+    },
+    "text_below_swiper": {
+      "type": "string",
+      "required": true
+    },
+    "Product": {
+      "displayName": "product",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us-item.product",
+      "required": true
+    },
+    "Body_text": {
+      "displayName": "Body_text",
+      "type": "component",
+      "repeatable": false,
+      "component": "about-us-item.body-text",
+      "required": true
+    },
+    "Indicator": {
+      "displayName": "Indicator",
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us-item.indicator",
+      "required": true
+    },
+    "our_approach_title": {
+      "type": "string",
+      "required": true
+    },
+    "Approach": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us-item.approach",
+      "required": true
+    },
+    "text_below_approach_container": {
+      "type": "richtext",
+      "required": true
+    },
+    "our_history_title": {
+      "type": "string",
+      "required": true
+    },
+    "History": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-us-item.history",
+      "required": true
+    }
+  }
+}

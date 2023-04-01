@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_item_contents",
+  "info": {
+    "displayName": "Content",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "first_title": {
+      "type": "string",
+      "required": true
+    },
+    "first_description": {
+      "type": "richtext",
+      "required": true
+    },
+    "second_title": {
+      "type": "string",
+      "required": true
+    },
+    "second_description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

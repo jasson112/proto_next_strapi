@@ -1,0 +1,35 @@
+{
+  "name": "proto-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "launch": "next build && next-sitemap && next export",
+    "postbuild": "next-sitemap"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^2.9.8",
+    "@splidejs/react-splide": "^0.7.8",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "joi": "^17.6.2",
+    "next": "12.2.2",
+    "next-sitemap": "^3.1.30",
+    "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1",
+    "proto-api": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.36.0",
+    "sass": "^1.54.1",
+    "sass-mq": "^6.0.0",
+    "swiper": "7.3.1"
+  },
+  "devDependencies": {
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.2"
+  }
+}

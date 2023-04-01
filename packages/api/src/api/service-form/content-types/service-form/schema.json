@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_forms",
+  "info": {
+    "singularName": "service-form",
+    "pluralName": "service-forms",
+    "displayName": "Service-Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "full_name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.banner {
+  position: relative;
+  background: black;
+  padding: 30px;
+  .banner_content {
+    position: relative;
+    z-index: 1;
+    h1{
+        color: white;
+        font-size: 40px;
+        margin: 15px 0;
+        font-weight: 800;
+    }
+    p{
+        color: white;
+        font-size: 24px;
+        margin: 15px 0;
+        font-weight: 800;
+        line-height: 34px;
+    }
+  }
+}
+.form_section{
+    padding: 30px;
+    h2{
+      font-size: 40px;
+      font-weight: 900;
+    }
+}
+.form_deco{
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: end;
+}
+
+@include mq("desktop", min) {
+  .banner{
+    height: 400px;
+    display: flex;
+    align-items: center;
+    .banner_content{
+      width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      p{
+        font-size: 28px;
+      }
+    }
+  }
+  .form_section{
+    width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  .form_deco{
+    position: absolute;
+    top: 600px;
+    right: 0;
+  }
+}

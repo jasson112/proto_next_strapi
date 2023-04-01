@@ -1,0 +1,25 @@
+{
+  "name": "proto",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev",
+    "build": "lerna run build --scope=proto-api",
+    "i": "lerna bootstrap --hoist",
+    "front": "lerna run dev --scope=proto-front",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff",
+    "api": "lerna run dev --scope=proto-api"
+  },
+  "devDependencies": {
+    "lerna": "^5.3.0"
+  },
+  "dependencies": {
+    "next-sitemap": "^3.1.30",
+    "react-google-recaptcha": "^2.1.0",
+    "react-gtm-module": "^2.0.11"
+  }
+}

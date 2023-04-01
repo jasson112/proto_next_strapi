@@ -1,0 +1,1262 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+figure {
+  margin: 0;
+}
+
+p,
+label {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  color: $black-color;
+}
+.input_group {
+  display: flex;
+  gap: 15px;
+  > .input_form {
+    flex: 1;
+  }
+  @include mq("phone", max) {
+    display: block;
+  }
+}
+.input_form {
+  margin: 10px 0;
+  @include mq("phone", max) {
+    margin: 20px 0;
+  }
+  .input {
+    input,
+    select,
+    textarea {
+      resize: none;
+      display: inline-flex;
+      width: 100%;
+      max-width: 100%;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      margin-top: 5px;
+      background: white;
+      border: solid 1px #676774;
+      border-radius: 5px;
+      &.big {
+        min-height: 128px;
+      }
+    }
+  }
+  textarea {
+    min-height: 128px;
+  }
+  .checkbox {
+    margin-right: 10px;
+    width: max-content;
+    display: inline-block;
+  }
+  .error {
+    margin: 0;
+    font-size: 10px;
+    color: red;
+  }
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin: 30px 0;
+  .cta_button {
+    @include mq("phone", max) {
+      width: 100%;
+    }
+  }
+}
+
+.cta_button {
+  margin: 10px 0;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  width: 153px;
+  text-align: center;
+  display: block;
+  @include font-source-sans(16px, white, bold, 30px);
+  letter-spacing: 1px;
+  background-color: transparent;
+  text-decoration: none;
+  &.biggy {
+    width: 442px;
+    @include mq("phone", max) {
+      width: 100%;
+    }
+  }
+  &.yell {
+    color: $black-color;
+    background-color: $green-ligth;
+    line-height: 37px;
+    text-transform: capitalize;
+    @include mq("phone", max) {
+      //width: 100%;
+    }
+  }
+  &.yell-ligth {
+    @include font-source-sans(16px, $yellow-color, bold, 35px);
+    border: 2px solid $yellow-color;
+    width: 100%;
+  }
+  &.black {
+    border: 2px solid $black-color;
+    @include font-source-sans(16px, $black-color, bold, 39px);
+    &:hover {
+      background: $black-color;
+      color: white;
+    }
+  }
+  &.light {
+    @include font-source-sans(16px, $black-color, bold, 30px);
+    letter-spacing: 0.77px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-color: $yellow-color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      border-radius: 15px;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  &.is_mobile {
+    display: none;
+    @include mq("phone", max) {
+      display: block;
+      margin-left: -35px;
+      margin-top: 40px;
+    }
+  }
+}
+
+.feat_wrapper {
+  padding-top: 77px;
+  margin: 0 auto;
+  display: grid;
+  border-bottom: 1px solid $black-color;
+  @include mq("desktop", min) {
+    width: 1000px;
+    grid-template-columns: [col1] 140px [col2] 260px [col3] 76px [col4] 76px [col5] 76px [col6] 220px [col7] 150px;
+    grid-template-rows: [row1] 322px [row2] 185px [row3] 261px [row3-end];
+  }
+  @include mq("tablet", max) {
+    width: unset;
+    max-width: 710px;
+    margin: 0 auto;
+    grid-template-columns: [col1] 135px [col2] 164px [col3] 0px [col4] 76px [col5] 5px [col6] 180px [col7] 150px;
+    grid-template-rows: [row1] 380px [row2] 182px [row3] 261px [row3-end];
+  }
+  @include mq("phone", max) {
+    padding-top: 39px;
+    width: unset;
+    //TODO: CREEATE PADDING INSTEAD OF MAX - LOOK FOR EXAMPLES IN A FRAMEWORK - EX: 70px sid by side
+    max-width: 500px;
+    overflow: hidden;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+  .feat_content {
+    .feat_content_title {
+      @include font-source-sans(28px, $black-color, 500, 34px);
+    }
+    .feat_content_subtitle {
+      @include font-source-sans(14px, $black-color, normal, 20px);
+    }
+    &.item_1 {
+      grid-column-start: col1;
+      grid-column-end: col3;
+      @include mq("phone", max) {
+        grid-column-start: unset;
+        grid-column-end: unset;
+        padding: 0 33px 0 33px;
+      }
+    }
+    &.item_2 {
+      @include mq("desktop", min) {
+        grid-column-start: col4;
+        grid-column-end: col7;
+      }
+      @include mq("tablet", max) {
+        grid-column-start: col6;
+        grid-column-end: col8;
+      }
+      @include mq("phone", max) {
+        grid-column-start: unset;
+        grid-column-end: unset;
+        width: 299px;
+        display: block;
+        margin: 0 auto;
+        margin-right: 0;
+      }
+    }
+    &.item_3 {
+      @include mq("desktop", min) {
+        grid-column-start: col2;
+        grid-column-end: col5;
+        z-index: -1;
+      }
+      @include mq("tablet", max) {
+        grid-column-start: col1;
+        grid-column-end: col4;
+      }
+      @include mq("phone", max) {
+        grid-column-start: unset;
+        grid-column-end: unset;
+        width: 299px;
+        display: block;
+        margin: 0 auto;
+        margin-left: 0;
+        margin-bottom: 40px;
+      }
+    }
+    &.item_4 {
+      padding-top: 60px;
+      grid-column-start: col6;
+      grid-column-end: col7-end;
+      grid-row-start: row2;
+
+      @include mq("tablet", max) {
+        padding-top: 0;
+      }
+      @include mq("phone", max) {
+        grid-column-start: unset;
+        grid-column-end: unset;
+        padding: 0 33px 0 33px;
+      }
+    }
+  }
+}
+
+.lined_title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 47px;
+  @include mq("phone", max) {
+    flex-flow: column;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+  h2 {
+    @include font-source-sans(38px, $black-color, 900, 47px);
+    white-space: nowrap;
+    margin: 0;
+    margin-right: 24px;
+
+    @include mq("tablet", max) {
+      font-size: 30px;
+    }
+    @include mq("phone", max) {
+      margin: 0;
+      @include font-source-sans(34px, $black-color, 900, 42px);
+      white-space: unset;
+      text-align: center;
+    }
+  }
+  hr {
+    width: 100%;
+    height: 0.5px;
+    background-color: $black-color;
+    border: none;
+    flex: 1;
+  }
+  h3 {
+    @include font-source-sans(23px, $black-color, 300, 27px);
+    letter-spacing: 0.12px;
+    white-space: nowrap;
+    text-align: right;
+    margin: 0;
+    margin-left: 24px;
+    @include mq("phone", max) {
+      margin: 0;
+      @include font-source-sans(22px, $black-color, 300, 27px);
+    }
+  }
+}
+
+.services_wrapper {
+  margin-top: 55px;
+  background-color: $yellow-color;
+  position: relative;
+  .services_container {
+    padding-top: 89px;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    @include mq("tablet", max) {
+      width: unset;
+      margin: 0 20px 0 20px;
+    }
+    @include mq("phone", max) {
+      width: unset;
+      overflow: hidden;
+      padding-bottom: 80px;
+      padding-top: 58px;
+    }
+    .services_list {
+      display: grid;
+      grid-template-columns: [col] 250px [col2] 250px [col3] 250px [col4] 250px;
+
+      @include mq("tablet", max) {
+        justify-content: center;
+        grid-template-columns: [col] 250px [col2] 250px;
+      }
+      @include mq("phone", max) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .service {
+        @include mq("phone", max) {
+          padding: 0 33px 0 33px;
+          max-width: 500px;
+        }
+        &:hover {
+          cursor: pointer;
+          figure {
+            &::before {
+              display: flex;
+            }
+            img {
+              filter: unset;
+            }
+          }
+          h4 {
+            p {
+              text-decoration: underline;
+            }
+          }
+        }
+        figure {
+          position: relative;
+          &::before {
+            display: none;
+            content: "Explore";
+            width: 100px;
+            height: 100px;
+            background-color: #e3f600;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 2;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            bottom: 40px;
+            left: 40px;
+            @include mq("phone", max) {
+              text-decoration: underline;
+              display: flex;
+            }
+          }
+          img {
+            filter: sepia(100%) hue-rotate(130deg) saturate(200%);
+            @include mq("phone", max) {
+              filter: unset;
+            }
+          }
+        }
+        > h3 {
+          margin: 20px 0;
+        }
+        > h4,
+        > span {
+          margin: 10px 0;
+        }
+        h3 {
+          @include font-source-sans(12px, $black-color, bold, 22px);
+          letter-spacing: 0.12px;
+        }
+        h4 {
+          @include mq("phone", max) {
+            text-decoration: underline;
+          }
+          p {
+            margin: 0;
+            @include font-source-sans(20px, $black-color, normal, 25px);
+            letter-spacing: 0.2px;
+            max-width: 238px;
+            @include mq("phone", max) {
+              display: block;
+              max-width: none;
+            }
+          }
+        }
+        p {
+          margin: 0;
+          @include font-source-sans(14px, $black-color, normal, 20px);
+          letter-spacing: 0;
+          max-width: 240px;
+          @include mq("phone", max) {
+            display: none;
+          }
+        }
+        &:nth-child(1) {
+          padding-top: $service-list-padding-top;
+        }
+        &:nth-child(2) {
+          padding-top: calc($service-list-padding-top * 2);
+          @include mq("phone", max) {
+            padding-top: 40px;
+          }
+        }
+        &:nth-child(3) {
+          padding-top: calc($service-list-padding-top * 3);
+          @include mq("phone", max) {
+            padding-top: 40px;
+          }
+        }
+        &:nth-child(4) {
+          padding-top: calc($service-list-padding-top * 4);
+          @include mq("phone", max) {
+            padding-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.clients_wrapper {
+  padding-top: 77px;
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  position: relative;
+
+  @include mq("tablet", max) {
+    width: unset;
+    margin: 0 20px 0 20px;
+  }
+  @include mq("phone", max) {
+    width: unset;
+    overflow: hidden;
+    padding-top: 0;
+    margin-top: 77px;
+    padding-bottom: 80px;
+  }
+  &::after {
+    content: "";
+    background-image: url("../public/clients_deco_r.png");
+    //TODO: CHECK BREAKPOINT ON DESKTOP FROM LITTLE TO BIGGER
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    right: -130px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @include mq("tablet", max) {
+      right: 0;
+      width: 130px;
+      height: 130px;
+    }
+    @include mq("phone", max) {
+      right: 0;
+      width: 70px;
+      height: 70px;
+    }
+  }
+  &::before {
+    content: "";
+    background-image: url("../public/clients_deco_l.png");
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 0;
+    left: -130px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @include mq("tablet", max) {
+      left: 0;
+      width: 130px;
+      height: 130px;
+    }
+    @include mq("phone", max) {
+      left: 0;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    @include font-source-sans(38px, $black-color, 900, 47px);
+    text-align: center;
+    letter-spacing: 0.38px;
+    @include mq("phone", max) {
+      @include font-source-sans(34px, $black-color, 900, 42px);
+      padding: 0 33px 0 33px;
+    }
+  }
+  p {
+    margin: 18px 0 51px 0;
+    @include font-source-sans(23px, $black-color, 300, 28px);
+    text-align: center;
+    @include mq("phone", max) {
+      padding: 0 33px 0 33px;
+    }
+  }
+  .clients_slider {
+    .splide__arrows {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .splide__arrow--next {
+        content: "";
+        background-image: url("/rigth_active.png");
+        width: 40px;
+        height: 40px;
+        border: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        &:disabled {
+          background-image: url("/left_dis.png");
+          transform: rotate(180deg);
+        }
+        svg {
+          display: none;
+        }
+      }
+      .splide__arrow--prev {
+        content: "";
+        background-image: url("/rigth_active.png");
+        transform: rotate(180deg);
+        width: 40px;
+        height: 40px;
+        border: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        &:disabled {
+          background-image: url("/left_dis.png");
+          transform: none;
+        }
+        svg {
+          display: none;
+        }
+      }
+    }
+
+    @include mq("tablet", max) {
+      .splide__pagination {
+        margin-top: 35px;
+        width: 100%;
+        display: flex;
+        padding: 0;
+        gap: 22px;
+        .splide__pagination__page {
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          border: 2px solid $black-color;
+          border-radius: 50%;
+          &.is-active {
+            background-color: $black-color;
+          }
+        }
+      }
+    }
+
+    @include mq("phone", max) {
+      .splide__pagination {
+        margin-top: 35px;
+        width: 100%;
+        display: flex;
+        padding: 0;
+        gap: 22px;
+        .splide__pagination__page {
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          border: 2px solid $black-color;
+          border-radius: 50%;
+          &.is-active {
+            background-color: $black-color;
+          }
+        }
+      }
+    }
+
+    .splide__track {
+      width: 720px;
+      margin: auto;
+
+      @include mq("tablet", max) {
+        width: 200px;
+      }
+      @include mq("phone", max) {
+        width: 200px;
+      }
+      .splide__slide {
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.stories_wrapper {
+  padding-top: 77px;
+  width: 1000px;
+  margin: 0 auto;
+
+  @include mq("tablet", max) {
+    width: unset;
+    margin: 0 20px 0 20px;
+  }
+  @include mq("phone", max) {
+    width: unset;
+    overflow: hidden;
+    padding-top: 0;
+  }
+}
+
+.stories_slider_wrapper {
+  position: relative;
+  padding-bottom: 200px;
+  &::after {
+    content: "";
+    width: 107px;
+    height: 107px;
+    position: absolute;
+    background-color: $yellow-color;
+    bottom: 0;
+  }
+  &::before {
+    content: "";
+    width: 107px;
+    height: 107px;
+    position: absolute;
+    background-color: $gray-ligth;
+    bottom: 0;
+    left: 107px;
+  }
+  .stories_slider {
+    .splide__arrows {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 350px;
+      padding-top: 100px;
+      z-index: 3;
+      @include mq("phone", max) {
+        gap: 280px;
+      }
+      .splide__arrow--next {
+        content: "";
+        background-image: url("/rigth_active_big.png");
+        width: 94px;
+        height: 94px;
+        border: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        @include mq("phone", max) {
+          background-image: url("/rigth_active.png");
+          width: 40px;
+          height: 40px;
+        }
+        &:disabled {
+          background-image: url("/left_dis_big.png");
+          transform: rotate(180deg);
+          @include mq("phone", max) {
+            background-image: url("/left_dis.png");
+          }
+        }
+        svg {
+          display: none;
+        }
+      }
+      .splide__arrow--prev {
+        content: "";
+        background-image: url("/rigth_active_big.png");
+        transform: rotate(180deg);
+        width: 94px;
+        height: 94px;
+        border: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        @include mq("phone", max) {
+          background-image: url("/rigth_active.png");
+          width: 40px;
+          height: 40px;
+        }
+        &:disabled {
+          background-image: url("/left_dis_big.png");
+          transform: none;
+          @include mq("phone", max) {
+            background-image: url("/left_dis.png");
+          }
+        }
+        svg {
+          display: none;
+        }
+      }
+    }
+    .splide__slide {
+      @include mq("phone", max) {
+        width: 270px;
+        overflow: hidden;
+      }
+      padding-top: 50px;
+      .story_item {
+        width: 255px;
+        margin: auto;
+        height: 300px;
+        overflow: hidden;
+        transition: height 1s;
+        color: white;
+        .story_item_img_container {
+          position: relative;
+          height: 240px;
+          &::before {
+            //content: "";
+            width: 500px;
+            height: 68px;
+            z-index: 2;
+            position: absolute;
+            top: -50px;
+            background-color: white;
+            border-radius: 50%;
+            transform: rotate(8deg);
+            left: -139px;
+          }
+          img {
+            height: 300px;
+            width: 100%;
+            filter: grayscale(1);
+          }
+        }
+      }
+      &.is-prev {
+        padding-top: 50px;
+        .story_item {
+          .story_item_img_container {
+            height: 240px;
+            &::before {
+              //content: "";
+              z-index: 2;
+              position: absolute;
+              border: 0;
+              background-color: white;
+              width: 500px;
+              height: 68px;
+              border-radius: 50%;
+              transform: rotate(4deg);
+              left: -200px;
+              top: -58px;
+            }
+          }
+          img {
+            height: 255px;
+          }
+          height: 255px;
+        }
+      }
+      &.is-next {
+        padding-top: 50px;
+        .story_item {
+          .story_item_img_container {
+            height: 240px;
+            &::before {
+              //content: "";
+              width: 500px;
+              height: 68px;
+              z-index: 2;
+              position: absolute;
+              top: -50px;
+              background-color: white;
+              border-radius: 50%;
+              transform: rotate(-6deg);
+              left: -100px;
+            }
+          }
+          img {
+            height: 255px;
+          }
+          height: 255px;
+        }
+        & + li {
+          .story_item {
+            height: 300px;
+            .story_item_img_container {
+              &::before {
+                //content: "";
+                margin: 0;
+                border: 0;
+                z-index: 2;
+                position: absolute;
+                background-color: white;
+                width: 500px;
+                height: 68px;
+                top: -40px;
+                border-radius: 50%;
+                transform: rotate(-8deg);
+                left: -110px;
+              }
+            }
+            img {
+              height: 300px;
+            }
+          }
+        }
+      }
+      &.is-active {
+        padding-top: 40px;
+        &::before {
+          content: "";
+          height: 107px;
+          width: 107px;
+          background-color: $yellow-color;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          z-index: -1;
+          border-radius: 50%;
+          border: none;
+        }
+        .story_item {
+          width: 255px;
+          margin: auto;
+          padding: 20px 10px 20px 10px;
+          background-color: $gray-ligth;
+          height: 600px;
+          .story_item_img_container {
+            height: 240px;
+            &::before {
+              border: none;
+              content: unset;
+            }
+            img {
+              display: block;
+              margin: auto;
+              height: auto;
+              filter: none;
+            }
+          }
+
+          h2 {
+            @include font-source-sans(17px, $black-color, normal, 20px);
+            letter-spacing: 0.17px;
+            margin: 23px 0 14px 0;
+          }
+          p {
+            @include font-source-sans(14px, $black-color, normal, 20px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  padding: 0;
+  .splide__pagination {
+    position: absolute;
+    bottom: 20px;
+    padding: 0;
+    gap: 17px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    li {
+      .splide__pagination__page {
+        width: 11px;
+        height: 11px;
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 0;
+        background-color: transparent;
+        &.is-active {
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+  .splide__slide {
+    display: flex;
+    img {
+      z-index: -1;
+      object-position: 60%;
+    }
+  }
+  .banner_content {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 1000px;
+    flex-direction: column;
+    gap: 21px;
+    z-index: 1;
+
+    @include mq("tablet", max) {
+      width: unset;
+      margin: 0 20px 0 20px;
+    }
+    @include mq("phone", max) {
+      width: unset;
+      overflow: hidden;
+      padding: 0 33px 0 33px;
+    }
+    .banner_title {
+      @include font-source-sans(36px, white, 900, 40px);
+      text-align: center;
+      margin: 0;
+
+      @include mq("tablet", max) {
+        font-size: 32px;
+      }
+      @include mq("phone", max) {
+        @include font-source-sans(34px, white, 900, 36px);
+        letter-spacing: 0.44px;
+      }
+    }
+    .banner_subtitle {
+      @include font-source-sans(16px, white, normal, 22px);
+      text-align: center;
+      max-width: 720px;
+      margin: 0;
+    }
+    .cta_button {
+      margin-top: 36px;
+      @include mq("phone", max) {
+        margin-top: 129px;
+      }
+    }
+  }
+}
+
+.contact_wrapper {
+  background-color: #202929;
+  .contact_container {
+    padding: 33px;
+    width: 1000px;
+    margin: 0 auto;
+
+    @include mq("tablet", max) {
+      width: unset;
+      margin: 0 20px 0 20px;
+    }
+    @include mq("phone", max) {
+      width: auto;
+      overflow: hidden;
+    }
+    h2 {
+      @include font-source-sans(38px, white, 900, 47px);
+      margin: 0;
+      letter-spacing: 0.38px;
+      margin-bottom: 10px;
+    }
+    > p {
+      @include font-source-sans(14px, white, normal, 20px);
+      margin: 0;
+      letter-spacing: 0.38px;
+      margin-bottom: 23px;
+    }
+    .contact_form {
+      @include mq("phone", max) {
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .input_wrapper {
+        display: flex;
+        gap: 15px;
+        padding-bottom: 10px;
+        align-items: center;
+
+        @include mq("tablet", max) {
+          gap: 10px;
+          .cta_button {
+            flex: 2;
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+        @include mq("phone", max) {
+          flex-flow: column;
+          gap: 10px;
+          flex-wrap: wrap;
+          align-items: unset;
+          .cta_button {
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+        > div {
+          flex: 1;
+          input {
+            width: 100%;
+            height: 40px;
+            background-color: #404545;
+            border-radius: 4px;
+            border-width: 0;
+            text-indent: 16px;
+            padding: 0;
+            @include font-source-sans(14px, white, normal, 20px);
+            // @include mq("phone", max) {
+            //   width: 300px;
+            //   text-indent: 14px;
+            // }
+          }
+        }
+        .error {
+          @include font-source-sans(10px, red, 300, 20px);
+          margin: 0;
+        }
+        .terms {
+          background-color: #404545;
+          border-radius: 4px;
+          position: relative;
+          padding: 19px;
+          padding-bottom: 5px;
+          width: 50%;
+
+          @include mq("tablet", max) {
+            flex: 2;
+          }
+          @include mq("phone", max) {
+            width: auto;
+            padding: 14px;
+          }
+          label {
+            display: flex;
+          }
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            &:checked {
+              & ~ .checkmark:after {
+                display: block;
+              }
+            }
+          }
+          .checkmark_label {
+            @include font-source-sans(10px, white, normal, 20px);
+            margin: 0;
+            a {
+              @include font-source-sans(10px, white, normal, 20px);
+            }
+          }
+          .checkmark {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 14px;
+            width: 14px;
+            background-color: transparent;
+            border: 1px solid #ffffff;
+            margin-right: 10px;
+            &::after {
+              content: "";
+              position: absolute;
+              display: none;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: white;
+            }
+          }
+        }
+      }
+      textarea {
+        padding: 10px 0;
+        width: 100%;
+        background-color: #404545;
+        border-radius: 4px;
+        border-width: 0;
+        text-indent: 16px;
+        height: 180px;
+        resize: none;
+        @include font-source-sans(14px, white, normal, 20px);
+        @include mq("phone", max) {
+          text-indent: 14px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #191f1f;
+  .footer_container {
+    padding-top: 33px;
+    padding-bottom: 64px;
+    width: 1000px;
+    display: grid;
+    gap: 75px;
+    grid-template-columns: 134px 213px 213px 213px;
+    margin: auto;
+
+    @include mq("tablet", max) {
+      width: unset;
+      margin: 0 20px 0 20px;
+      gap: 50px;
+      grid-template-columns: 130px 229px 90px 110px;
+    }
+    @include mq("phone", max) {
+      width: auto;
+      overflow: hidden;
+      grid-template-columns: auto;
+      padding: 33px;
+      gap: 18px;
+      flex-direction: column;
+      .follow_item {
+        height: 68px !important;
+      }
+    }
+    .footer_item {
+      display: flex;
+      flex-direction: column;
+      height: 167px;
+      h2 {
+        margin: 0;
+        @include font-source-sans(14px, white, 900, 20px);
+      }
+      p,
+      a {
+        margin: 14px 0;
+        @include font-source-sans(14px, white, normal, 20px);
+      }
+      .social_networks a {
+        text-decoration: none;
+        display: flex;
+      }
+    }
+  }
+}
+
+.footer_sitemap_wrapper {
+  background-color: #202929;
+  padding: 16px;
+  .footer_sitemap_container {
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq("tablet", max) {
+      width: unset;
+    }
+    @include mq("phone", max) {
+      width: unset;
+      overflow: hidden;
+      flex-flow: column;
+    }
+    a {
+      margin: 0;
+      @include font-source-sans(11px, white, normal, 22px);
+      letter-spacing: 0.03px;
+      //text-decoration: none;
+    }
+  }
+}
+
+// Go to top code
+.top {
+  z-index: 3;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+// Arrow Icon
+.arrow {
+  background: black;
+  height: 2px;
+  width: 15px;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: "";
+    background: black;
+    position: absolute;
+    height: 2px;
+    width: 10px;
+  }
+
+  &:before {
+    right: -3px;
+    bottom: -3px;
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    right: -3px;
+    top: -3px;
+    transform: rotate(45deg);
+  }
+}
+
+#customer,
+#digital,
+#people {
+  scroll-margin-top: 75px;
+}
+#in_numbers,
+#clients,
+#we_do_best,
+#middle_name {
+  scroll-margin-top: 122px;
+}
+
+@import "menu";
+@import "about";

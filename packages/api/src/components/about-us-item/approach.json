@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_about_us_item_approaches",
+  "info": {
+    "displayName": "Approach",
+    "icon": "allergies"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
