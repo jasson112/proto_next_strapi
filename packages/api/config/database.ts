@@ -1,4 +1,3 @@
-console.log("TEST");
 export default ({ env }) => ({
   connection: {
     client: "mysql",

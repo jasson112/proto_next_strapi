@@ -3,11 +3,11 @@ module.exports = {
     const { result } = event;
 
     try {
-      interface Options {
+      /* interface Options {
         sendMailTest?: any;
       }
       const api: Options = strapi.service("api::contact-email.contact-email");
-      await api.sendMailTest(event);
+      await api.sendMailTest(event); */
     } catch (err) {
       console.log("LifeCycle Error", err);
     }

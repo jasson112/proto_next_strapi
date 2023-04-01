@@ -1,7 +1,4 @@
 module.exports = ({ env }) => ({
-  ckeditor: {
-    enabled: true,
-  },
   email: {
     provider: "nodemailer",
     providerOptions: {

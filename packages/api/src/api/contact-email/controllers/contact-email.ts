@@ -8,7 +8,7 @@ export default factories.createCoreController('api::contact-email.contact-email'
     async submitDataHomeForm(ctx) {
       const { data, recaptchaValue } = ctx.request.body;
       try {
-        interface Options {
+        /* interface Options {
           verifyCaptcha?: any;
           sendMailTest?: any;
         }
@@ -20,7 +20,7 @@ export default factories.createCoreController('api::contact-email.contact-email'
         } else {
           console.log("invalid captcha");
           ctx.response.badRequest('invalid captcha');
-        }
+        } */
       } catch (err) {
         console.log("LifeCycle Error", err);
       }

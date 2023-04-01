@@ -1,6 +1,6 @@
 module.exports = {
   async afterCreate(event) {
-    const { result } = event;
+    /* const { result } = event;
 
     try {
       interface Options {
@@ -10,6 +10,6 @@ module.exports = {
       await api.sendMailTest(event);
     } catch (err) {
       console.log("LifeCycle Error", err);
-    }
+    } */
   },
 };

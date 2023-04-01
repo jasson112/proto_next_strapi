@@ -6,7 +6,7 @@ import { factories } from '@strapi/strapi'
 
 export default factories.createCoreController("api::service-form.service-form", ({ strapi }) => ({
     async submitDataServicesForm(ctx) {
-      const { data, recaptchaValue } = ctx.request.body;
+      /* const { data, recaptchaValue } = ctx.request.body;
       try {
         interface Options {
           verifyCaptcha?: any;
@@ -23,7 +23,7 @@ export default factories.createCoreController("api::service-form.service-form", 
       } catch (err) {
         console.log("LifeCycle Error", err);
       }
-      console.log(data, recaptchaValue);
+      console.log(data, recaptchaValue); */
     },
   })
 );
