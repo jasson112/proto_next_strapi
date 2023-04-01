@@ -20,14 +20,21 @@ First create the following `.env` files
 
 - `packages/api/.env`
 ```
-APP_KEYS=random-string
-API_TOKEN_SALT=random-string-saltJWT_SECRET=KRpPlv7oEzQIZB/xpjDT9g==
-JWT_SECRET=DtQT0RIRyop4XJqjoyBgzg==
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=/c9AsFOTqJC+MrFqIB+w9g==,X1PZz7SuHY5aThzdaWOiRQ==,sC2AF2ytD1yLqIok5n/Sww==,C2Sg3CAxbF7zU3Ip92lqpg==
+API_TOKEN_SALT=+mH+kb6gns7CCX514qXu0Q==
+ADMIN_JWT_SECRET=ttagB2I0ru0537fl7eaajQ==
+TRANSFER_TOKEN_SALT=30XQC5QtWUreHjUXwAFDOQ==JWT_SECRET=g91bz+MjSgicXbGsRcHiAA==
+JWT_SECRET=ihAvVPR57QGUVRBPDPUr3Q==
+
 ```
 - `packages/front/.env`
 
 ```
-CMS_URL=localhost:1337
+CMS_URL=http://localhost:1337
+SITE_KEY2=124
+SITE_KEY=124
 ```
 
 Then run `yarn` in order to install all the nodejs dependencies, once you have all installed correctly please be sure that you have docker up and running then you can run `yarn dev` i used lerna in order to manage my monorepo

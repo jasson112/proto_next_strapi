@@ -16,10 +16,5 @@
   },
   "devDependencies": {
     "lerna": "^5.3.0"
-  },
-  "dependencies": {
-    "next-sitemap": "^3.1.30",
-    "react-google-recaptcha": "^2.1.0",
-    "react-gtm-module": "^2.0.11"
   }
 }
