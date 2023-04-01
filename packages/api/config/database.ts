@@ -4,7 +4,7 @@ export default ({ env }) => ({
     client: "mysql",
     connection: {
       host: env("DATABASE_HOST", "localhost"),
-      port: env.int("DATABASE_PORT", 3306),
+      port: env.int("DATABASE_PORT", 33061),
       database: env("DATABASE_NAME", "test"),
       user: env("DATABASE_USERNAME", "root"),
       password: env("DATABASE_PASSWORD", "12345"),

@@ -6,7 +6,7 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "lerna run dev",
+    "dev": "lerna run dev --parallel --scope proto-api --scope proto-front",
     "build": "lerna run build --scope=proto-api",
     "i": "lerna bootstrap --hoist",
     "front": "lerna run dev --scope=proto-front",
